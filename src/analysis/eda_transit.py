@@ -176,21 +176,21 @@ def fig_demand_candidates(d):
     d["지표"] = z(-d["출근_평균속도"]) + z(-d["순유입"])
     d = d.sort_values("지표", ascending=False).reset_index()
     top = d.head(8)
-    fig, ax = plt.subplots(figsize=(10, 6.2))
-    y = np.arange(len(d))[::-1]
-    ax.barh(y, d["지표"], height=0.62, color=[SERIES[0] if i < 8 else GRAY for i in range(len(d))])
-    for yi, (_, r) in zip(y, d.iterrows()):
-        ax.text(r["지표"] + (0.05 if r["지표"] >= 0 else -0.05), yi,
-                f"{r['출근_평균속도']:.0f}km/h · 순유입 {r['순유입'] / 1e4:+.1f}만",
-                va="center", ha="left" if r["지표"] >= 0 else "right", fontsize=7.5, color=INK2)
+    show = d.head(10)  # 보고서 지면 — 상위 10곳만 그림, 전체 25곳은 표에 저장
+    fig, ax = plt.subplots(figsize=(10, 4.6))
+    y = np.arange(len(show))[::-1]
+    ax.barh(y, show["지표"], height=0.62, color=[SERIES[0] if i < 8 else GRAY for i in range(len(show))])
+    for yi, (_, r) in zip(y, show.iterrows()):
+        ax.text(r["지표"] + 0.05, yi, f"{r['출근_평균속도']:.0f}km/h · 순유입 {r['순유입'] / 1e4:+.1f}만",
+                va="center", ha="left", fontsize=8.5, color=INK2)
     ax.axvline(0, color=AXIS, lw=1)
-    ax.set_xlim(d["지표"].min() - 1.9, d["지표"].max() + 1.6)  # 막대 끝 라벨 공간
-    ax.set_yticks(y, d["자치구"], fontsize=9)
+    ax.set_xlim(0, show["지표"].max() + 1.6)  # 막대 끝 라벨 공간
+    ax.set_yticks(y, show["자치구"], fontsize=9.5)
     ax.grid(axis="y", visible=False)
     ax.set_xlabel("탐색 지표 = z(-출근 도로속도) + z(-출근 대중교통 순유입)")
     titles(fig, "추가 대중교통 수요 발생 가능 자치구 (탐색 지표)",
-           "도로 혼잡이 심하고 출근 유출이 큰(주거지 성격) 자치구일수록 높음 · 상위 8곳 강조 · 가중치 1:1은 가정 · 인과 아님")
-    fig.subplots_adjust(left=0.1, right=0.97, top=0.86, bottom=0.13)
+           "도로 혼잡이 심하고 출근 유출이 큰(주거지 성격) 자치구일수록 높음 · 상위 10곳 표시(전체 25곳은 표), 8곳 강조 · 가중치 1:1은 가정")
+    fig.subplots_adjust(left=0.1, right=0.97, top=0.82, bottom=0.15)
     save(fig, "C06_추가대중교통수요_후보자치구", f"{SRC_SUB}; {SRC_BUS}; 서울 교통빅데이터플랫폼 소통정보",
          d[["자치구", "출근_평균속도", "승차", "하차", "순유입", "정류소밀도", "지표"]].round(2))
     return top

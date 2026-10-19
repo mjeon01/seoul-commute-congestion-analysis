@@ -251,7 +251,7 @@ def fig_compare(res):
     panels = [("속도변화_pct", "첨두 평균속도 변화 (%)", True), ("정체비율_pct", "정체 도로 연장비율 (%)", True),
               ("대중교통_추가수요_인시", "대중교통 추가수요 (만 명/시)", False), ("VKT변화_pct", "주행거리(VKT) 변화 (%) — CO2 대리 지표", False)]
     for period in PERIODS:
-        fig, axes = plt.subplots(2, 2, figsize=(13, 9.5))
+        fig, axes = plt.subplots(2, 2, figsize=(13, 7.6))
         tab = []
         for ax, (col, lbl, by_method) in zip(axes.ravel(), panels):
             methods = ["탄력성", "BPR"] if by_method else ["탄력성"]

@@ -31,8 +31,20 @@ def get(url, params=None, retries=4, timeout=60):
             time.sleep(2 ** i)
 
 
-def seoul_page(service, start, end, args=(), fmt="json"):
-    """열린데이터광장 1페이지 호출 → (전체건수, 행 리스트). 데이터 없음(INFO-200)은 (0, [])."""
+def seoul_page(service, start, end, args=(), fmt="json", retries=4):
+    """열린데이터광장 1페이지 호출 → (전체건수, 행 리스트). 데이터 없음(INFO-200)은 (0, []).
+
+    서버가 가끔 빈 응답이나 깨진 XML/JSON을 돌려주므로 몇 번 다시 시도한 뒤 ApiError로 넘긴다."""
+    for i in range(retries):
+        try:
+            return _seoul_page(service, start, end, args, fmt)
+        except (ET.ParseError, json.JSONDecodeError, ApiError) as e:
+            if i == retries - 1:
+                raise ApiError(f"{service} {args}: {type(e).__name__} {e}") from None
+            time.sleep(2 ** i)
+
+
+def _seoul_page(service, start, end, args, fmt):
     key = ENV["SEOUL_OPEN_API_KEY"]
     path = "/".join([key, fmt, service, str(start), str(end), *map(str, args)])
     text = get(f"{SEOUL_BASE}/{path}/").text

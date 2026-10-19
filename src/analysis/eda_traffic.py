@@ -87,7 +87,7 @@ def fig_hourly_jam(s):
     t["정체비율_pct"] = t.jam_len / t.length_m * 100
     t["서행이상비율_pct"] = (t.jam_len + t.slow_len) / t.length_m * 100
     t = t.reset_index().rename(columns={"hour_start": "시작시각"})[["시작시각", "정체비율_pct", "서행이상비율_pct"]]
-    fig, ax = plt.subplots(figsize=(10, 5.4))
+    fig, ax = plt.subplots(figsize=(10, 4.4))
     ax.plot(t["시작시각"], t["서행이상비율_pct"], color=SERIES[1], label="서행 이상")
     ax.plot(t["시작시각"], t["정체비율_pct"], color=SERIES[0], label="정체")
     ax.set_ylim(0, t["서행이상비율_pct"].max() * 1.15)
