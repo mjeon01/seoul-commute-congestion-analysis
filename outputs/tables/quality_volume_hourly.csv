@@ -1,0 +1,17 @@
+﻿,dtype,missing,missing_pct,min,50%,max
+spot_num,str,0,0.0,,,
+io_type,str,0,0.0,,,
+vol,int64,0,0.0,0.0,1286.0,7779.0
+n_lanes,int64,0,0.0,1.0,3.0,10.0
+lane_missing,int64,0,0.0,,,
+date,datetime64[us],0,0.0,,,
+hour_start,int64,0,0.0,,,
+datetime,datetime64[us],0,0.0,,,
+spot_nm,str,0,0.0,,,
+SIGUNGU_CD,str,0,0.0,,,
+SIGUNGU_NM,str,0,0.0,,,
+boundary_spot,bool,0,0.0,,,
+weekday,str,0,0.0,,,
+holiday_name,str,12981,100.0,,,
+day_type,str,0,0.0,,,
+peak,str,0,0.0,,,

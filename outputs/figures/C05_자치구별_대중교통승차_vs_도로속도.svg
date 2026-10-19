@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="774.49125pt" height="513.36pt" viewBox="0 0 774.49125 513.36" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-19T16:08:02.693103</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 513.36 
+L 774.49125 513.36 
+L 774.49125 0 
+L 0 0 
+z
+" style="fill: #fcfcfb"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 45.8 455.26 
+L 704.183636 455.26 
+L 704.183636 82.68 
+L 45.8 82.68 
+z
+" style="fill: #fcfcfb"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 96.724459 455.26 
+L 96.724459 82.68 
+" clip-path="url(#pc6d6722e6c)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="m16f10014b2" d="M 0 0 
+L 0 3.5 
+" style="stroke: #898781; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m16f10014b2" x="96.724459" y="455.26" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 10.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #898781" x="96.724459" y="470.66" transform="rotate(-0 96.724459 470.66)">3</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 203.983896 455.26 
+L 203.983896 82.68 
+" clip-path="url(#pc6d6722e6c)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m16f10014b2" x="203.983896" y="455.26" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 10.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #898781" x="203.983896" y="470.66" transform="rotate(-0 203.983896 470.66)">4</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 311.243333 455.26 
+L 311.243333 82.68 
+" clip-path="url(#pc6d6722e6c)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m16f10014b2" x="311.243333" y="455.26" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 10.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #898781" x="311.243333" y="470.66" transform="rotate(-0 311.243333 470.66)">5</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 418.502769 455.26 
+L 418.502769 82.68 
+" clip-path="url(#pc6d6722e6c)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m16f10014b2" x="418.502769" y="455.26" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 10.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #898781" x="418.502769" y="470.66" transform="rotate(-0 418.502769 470.66)">6</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 525.762206 455.26 
+L 525.762206 82.68 
+" clip-path="url(#pc6d6722e6c)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m16f10014b2" x="525.762206" y="455.26" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 10.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #898781" x="525.762206" y="470.66" transform="rotate(-0 525.762206 470.66)">7</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 633.021643 455.26 
+L 633.021643 82.68 
+" clip-path="url(#pc6d6722e6c)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m16f10014b2" x="633.021643" y="455.26" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 10.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #898781" x="633.021643" y="470.66" transform="rotate(-0 633.021643 470.66)">8</text>
+     </g>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 10.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #52514e" x="374.991818" y="485.16" transform="rotate(-0 374.991818 485.16)">출근시간(08~10시) 대중교통 일평균 승차 (만 명, 2025년)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_13">
+      <path d="M 45.8 381.87303 
+L 704.183636 381.87303 
+" clip-path="url(#pc6d6722e6c)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_14">
+      <defs>
+       <path id="ma8a2dbf971" d="M 0 0 
+L -3.5 0 
+" style="stroke: #898781; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#ma8a2dbf971" x="45.8" y="381.87303" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 10.5px; font-family: 'NanumGothic'; text-anchor: end; fill: #898781" x="38.8" y="386.07303" transform="rotate(-0 38.8 386.07303)">22</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_15">
+      <path d="M 45.8 301.228009 
+L 704.183636 301.228009 
+" clip-path="url(#pc6d6722e6c)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#ma8a2dbf971" x="45.8" y="301.228009" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 10.5px; font-family: 'NanumGothic'; text-anchor: end; fill: #898781" x="38.8" y="305.428009" transform="rotate(-0 38.8 305.428009)">24</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_17">
+      <path d="M 45.8 220.582987 
+L 704.183636 220.582987 
+" clip-path="url(#pc6d6722e6c)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#ma8a2dbf971" x="45.8" y="220.582987" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 10.5px; font-family: 'NanumGothic'; text-anchor: end; fill: #898781" x="38.8" y="224.782987" transform="rotate(-0 38.8 224.782987)">26</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_19">
+      <path d="M 45.8 139.937965 
+L 704.183636 139.937965 
+" clip-path="url(#pc6d6722e6c)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#ma8a2dbf971" x="45.8" y="139.937965" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 10.5px; font-family: 'NanumGothic'; text-anchor: end; fill: #898781" x="38.8" y="144.137965" transform="rotate(-0 38.8 144.137965)">28</text>
+     </g>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 10.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #52514e" x="19.975313" y="268.97" transform="rotate(-90 19.975313 268.97)">출근시간 도로 평균속도 (km/h, 2026-10-14·15)</text>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 45.8 455.26 
+L 45.8 82.68 
+" style="fill: none; stroke: #c3c2b7; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 45.8 455.26 
+L 704.183636 455.26 
+" style="fill: none; stroke: #c3c2b7; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="PathCollection_1">
+    <defs>
+     <path id="m5ea9a427c2" d="M 0 3.872983 
+C 1.027127 3.872983 2.012324 3.464901 2.738613 2.738613 
+C 3.464901 2.012324 3.872983 1.027127 3.872983 0 
+C 3.872983 -1.027127 3.464901 -2.012324 2.738613 -2.738613 
+C 2.012324 -3.464901 1.027127 -3.872983 0 -3.872983 
+C -1.027127 -3.872983 -2.012324 -3.464901 -2.738613 -2.738613 
+C -3.464901 -2.012324 -3.872983 -1.027127 -3.872983 0 
+C -3.872983 1.027127 -3.464901 2.012324 -2.738613 2.738613 
+C -2.012324 3.464901 -1.027127 3.872983 0 3.872983 
+z
+" style="stroke: #ffffff; stroke-width: 2"/>
+    </defs>
+    <g clip-path="url(#pc6d6722e6c)">
+     <use xlink:href="#m5ea9a427c2" x="674.257107" y="256.873247" style="fill: #2a78d6; stroke: #ffffff; stroke-width: 2"/>
+     <use xlink:href="#m5ea9a427c2" x="235.167123" y="309.292511" style="fill: #2a78d6; stroke: #ffffff; stroke-width: 2"/>
+     <use xlink:href="#m5ea9a427c2" x="226.398062" y="438.324545" style="fill: #2a78d6; stroke: #ffffff; stroke-width: 2"/>
+     <use xlink:href="#m5ea9a427c2" x="442.939731" y="309.292511" style="fill: #2a78d6; stroke: #ffffff; stroke-width: 2"/>
+     <use xlink:href="#m5ea9a427c2" x="671.66954" y="99.615455" style="fill: #2a78d6; stroke: #ffffff; stroke-width: 2"/>
+     <use xlink:href="#m5ea9a427c2" x="298.676082" y="244.776494" style="fill: #2a78d6; stroke: #ffffff; stroke-width: 2"/>
+     <use xlink:href="#m5ea9a427c2" x="501.495332" y="301.228009" style="fill: #2a78d6; stroke: #ffffff; stroke-width: 2"/>
+     <use xlink:href="#m5ea9a427c2" x="75.726529" y="152.034719" style="fill: #2a78d6; stroke: #ffffff; stroke-width: 2"/>
+     <use xlink:href="#m5ea9a427c2" x="326.068027" y="285.099004" style="fill: #2a78d6; stroke: #ffffff; stroke-width: 2"/>
+     <use xlink:href="#m5ea9a427c2" x="135.865485" y="402.034286" style="fill: #2a78d6; stroke: #ffffff; stroke-width: 2"/>
+     <use xlink:href="#m5ea9a427c2" x="270.812255" y="273.002251" style="fill: #2a78d6; stroke: #ffffff; stroke-width: 2"/>
+     <use xlink:href="#m5ea9a427c2" x="497.188087" y="228.647489" style="fill: #2a78d6; stroke: #ffffff; stroke-width: 2"/>
+     <use xlink:href="#m5ea9a427c2" x="384.820103" y="204.453983" style="fill: #2a78d6; stroke: #ffffff; stroke-width: 2"/>
+     <use xlink:href="#m5ea9a427c2" x="223.627507" y="349.615022" style="fill: #2a78d6; stroke: #ffffff; stroke-width: 2"/>
+     <use xlink:href="#m5ea9a427c2" x="388.313763" y="111.712208" style="fill: #2a78d6; stroke: #ffffff; stroke-width: 2"/>
+     <use xlink:href="#m5ea9a427c2" x="256.484687" y="107.679957" style="fill: #2a78d6; stroke: #ffffff; stroke-width: 2"/>
+     <use xlink:href="#m5ea9a427c2" x="379.374116" y="196.389481" style="fill: #2a78d6; stroke: #ffffff; stroke-width: 2"/>
+     <use xlink:href="#m5ea9a427c2" x="671.709182" y="268.97" style="fill: #2a78d6; stroke: #ffffff; stroke-width: 2"/>
+     <use xlink:href="#m5ea9a427c2" x="231.223973" y="244.776494" style="fill: #2a78d6; stroke: #ffffff; stroke-width: 2"/>
+     <use xlink:href="#m5ea9a427c2" x="396.99449" y="139.937965" style="fill: #2a78d6; stroke: #ffffff; stroke-width: 2"/>
+     <use xlink:href="#m5ea9a427c2" x="142.088942" y="152.034719" style="fill: #2a78d6; stroke: #ffffff; stroke-width: 2"/>
+     <use xlink:href="#m5ea9a427c2" x="458.296843" y="438.324545" style="fill: #2a78d6; stroke: #ffffff; stroke-width: 2"/>
+     <use xlink:href="#m5ea9a427c2" x="122.566108" y="377.840779" style="fill: #2a78d6; stroke: #ffffff; stroke-width: 2"/>
+     <use xlink:href="#m5ea9a427c2" x="274.767014" y="434.292294" style="fill: #2a78d6; stroke: #ffffff; stroke-width: 2"/>
+     <use xlink:href="#m5ea9a427c2" x="246.378174" y="260.905498" style="fill: #2a78d6; stroke: #ffffff; stroke-width: 2"/>
+    </g>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="679.257107" y="253.873247" transform="rotate(-0 679.257107 253.873247)">강남구</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="240.167123" y="306.292511" transform="rotate(-0 240.167123 306.292511)">강동구</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="231.398062" y="435.324545" transform="rotate(-0 231.398062 435.324545)">강북구</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="447.939731" y="306.292511" transform="rotate(-0 447.939731 306.292511)">강서구</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="676.66954" y="96.615455" transform="rotate(-0 676.66954 96.615455)">관악구</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="303.676082" y="241.776494" transform="rotate(-0 303.676082 241.776494)">광진구</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="506.495332" y="298.228009" transform="rotate(-0 506.495332 298.228009)">구로구</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="80.726529" y="149.034719" transform="rotate(-0 80.726529 149.034719)">금천구</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="331.068027" y="282.099004" transform="rotate(-0 331.068027 282.099004)">노원구</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="140.865485" y="399.034286" transform="rotate(-0 140.865485 399.034286)">도봉구</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="275.812255" y="270.002251" transform="rotate(-0 275.812255 270.002251)">동대문구</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="502.188087" y="225.647489" transform="rotate(-0 502.188087 225.647489)">동작구</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="389.820103" y="201.453983" transform="rotate(-0 389.820103 201.453983)">마포구</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="228.627507" y="346.615022" transform="rotate(-0 228.627507 346.615022)">서대문구</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="393.313763" y="108.712208" transform="rotate(-0 393.313763 108.712208)">서초구</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="261.484687" y="104.679957" transform="rotate(-0 261.484687 104.679957)">성동구</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="384.374116" y="193.389481" transform="rotate(-0 384.374116 193.389481)">성북구</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="676.709182" y="265.97" transform="rotate(-0 676.709182 265.97)">송파구</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="236.223973" y="241.776494" transform="rotate(-0 236.223973 241.776494)">양천구</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="401.99449" y="136.937965" transform="rotate(-0 401.99449 136.937965)">영등포구</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="147.088942" y="149.034719" transform="rotate(-0 147.088942 149.034719)">용산구</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="463.296843" y="435.324545" transform="rotate(-0 463.296843 435.324545)">은평구</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="127.566108" y="374.840779" transform="rotate(-0 127.566108 374.840779)">종로구</text>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="279.767014" y="431.292294" transform="rotate(-0 279.767014 431.292294)">중구</text>
+   </g>
+   <g id="text_37">
+    <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="251.378174" y="257.905498" transform="rotate(-0 251.378174 257.905498)">중랑구</text>
+   </g>
+   <g id="text_38">
+    <text style="font-size: 9px; font-family: 'NanumGothic'; fill: #52514e" transform="translate(52.383836 93.6058)">스피어만 순위상관 ρ = 0.20</text>
+    <text style="font-size: 9px; font-family: 'NanumGothic'; fill: #52514e" transform="translate(52.383836 102.6058)">(n=25, 서로 다른 기간 — 인과 해석 불가)</text>
+   </g>
+  </g>
+  <g id="text_39">
+   <text style="font-weight: 700; font-size: 15px; font-family: 'NanumGothic'; text-anchor: start; fill: #0b0b0b" x="7.2" y="19.2" transform="rotate(-0 7.2 19.2)">자치구별 출근시간 대중교통 승차량과 도로 속도</text>
+  </g>
+  <g id="text_40">
+   <text style="font-size: 10.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="7.2" y="40.8" transform="rotate(-0 7.2 40.8)">대중교통: 2025년 일평균(월 합계 기반) · 도로: 2026-10-14(수)·15(목) 08~10시 · 기간이 달라 패턴 비교만 가능</text>
+  </g>
+  <g id="text_41">
+   <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #898781" x="7.2" y="504.46" transform="rotate(-0 7.2 504.46)">출처: 서울 열린데이터광장 지하철 호선별 역별 시간대별 승하차 인원(CardSubwayTime); 서울 열린데이터광장 버스노선별 정류장별 시간대별 승하차 인원(CardBusTimeNew); 서울 교통빅데이터플랫폼 소통정보</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pc6d6722e6c">
+   <rect x="45.8" y="82.68" width="658.383636" height="372.58"/>
+  </clipPath>
+ </defs>
+</svg>

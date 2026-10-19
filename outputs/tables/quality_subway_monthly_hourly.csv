@@ -1,0 +1,16 @@
+﻿,dtype,missing,missing_pct,min,50%,max
+line,str,0,0.0,,,
+station,str,0,0.0,,,
+ym,str,0,0.0,,,
+hour_start,int64,0,0.0,,,
+alight,float64,0,0.0,0.0,7079.0,425384.0
+board,float64,0,0.0,0.0,7196.0,362158.0
+month,datetime64[us],0,0.0,,,
+daily_board,float64,0,0.0,,,
+daily_alight,float64,0,0.0,,,
+peak,str,0,0.0,,,
+key,str,0,0.0,,,
+ADM_CD,str,183408,37.29,,,
+ADM_NM,str,183408,37.29,,,
+SIGUNGU_CD,str,183408,37.29,,,
+SIGUNGU_NM,str,183408,37.29,,,

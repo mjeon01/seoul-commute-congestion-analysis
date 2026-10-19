@@ -1,0 +1,7 @@
+﻿,dtype,missing,missing_pct,min,50%,max
+spot_num,str,0,0.0,,,
+ymd,str,0,0.0,,,
+hh,str,0,0.0,,,
+io_type,str,0,0.0,,,
+lane_num,str,0,0.0,,,
+vol,int64,0,0.0,0.0,380.0,1844.0

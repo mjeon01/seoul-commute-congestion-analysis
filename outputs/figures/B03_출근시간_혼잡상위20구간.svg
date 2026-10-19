@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="717.857358pt" height="613.152pt" viewBox="0 0 717.857358 613.152" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-19T16:01:38.067022</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 613.152 
+L 717.857358 613.152 
+L 717.857358 0 
+L 0 0 
+z
+" style="fill: #fcfcfb"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 241.9 553.54 
+L 708.66 553.54 
+L 708.66 84.192 
+L 241.9 84.192 
+z
+" style="fill: #fcfcfb"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 241.9 119.009262 
+L 575.36619 119.009262 
+L 575.36619 105.526 
+L 241.9 105.526 
+z
+" clip-path="url(#p3b34ea1ba2)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 241.9 140.756459 
+L 589.398511 140.756459 
+L 589.398511 127.273197 
+L 241.9 127.273197 
+z
+" clip-path="url(#p3b34ea1ba2)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 241.9 162.503655 
+L 618.654576 162.503655 
+L 618.654576 149.020393 
+L 241.9 149.020393 
+z
+" clip-path="url(#p3b34ea1ba2)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 241.9 184.250852 
+L 629.642148 184.250852 
+L 629.642148 170.76759 
+L 241.9 170.76759 
+z
+" clip-path="url(#p3b34ea1ba2)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 241.9 205.998049 
+L 630.568811 205.998049 
+L 630.568811 192.514787 
+L 241.9 192.514787 
+z
+" clip-path="url(#p3b34ea1ba2)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 241.9 227.745246 
+L 638.114493 227.745246 
+L 638.114493 214.261984 
+L 241.9 214.261984 
+z
+" clip-path="url(#p3b34ea1ba2)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 241.9 249.492442 
+L 638.246873 249.492442 
+L 638.246873 236.00918 
+L 241.9 236.00918 
+z
+" clip-path="url(#p3b34ea1ba2)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 241.9 271.239639 
+L 654.529661 271.239639 
+L 654.529661 257.756377 
+L 241.9 257.756377 
+z
+" clip-path="url(#p3b34ea1ba2)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 241.9 292.986836 
+L 654.926802 292.986836 
+L 654.926802 279.503574 
+L 241.9 279.503574 
+z
+" clip-path="url(#p3b34ea1ba2)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 241.9 314.734033 
+L 658.501072 314.734033 
+L 658.501072 301.250771 
+L 241.9 301.250771 
+z
+" clip-path="url(#p3b34ea1ba2)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 241.9 336.481229 
+L 664.458189 336.481229 
+L 664.458189 322.997967 
+L 241.9 322.997967 
+z
+" clip-path="url(#p3b34ea1ba2)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 241.9 358.228426 
+L 667.767699 358.228426 
+L 667.767699 344.745164 
+L 241.9 344.745164 
+z
+" clip-path="url(#p3b34ea1ba2)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 241.9 379.975623 
+L 669.356264 379.975623 
+L 669.356264 366.492361 
+L 241.9 366.492361 
+z
+" clip-path="url(#p3b34ea1ba2)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 241.9 401.72282 
+L 669.753405 401.72282 
+L 669.753405 388.239558 
+L 241.9 388.239558 
+z
+" clip-path="url(#p3b34ea1ba2)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 241.9 423.470016 
+L 673.195295 423.470016 
+L 673.195295 409.986754 
+L 241.9 409.986754 
+z
+" clip-path="url(#p3b34ea1ba2)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 241.9 445.217213 
+L 676.901946 445.217213 
+L 676.901946 431.733951 
+L 241.9 431.733951 
+z
+" clip-path="url(#p3b34ea1ba2)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 241.9 466.96441 
+L 677.034326 466.96441 
+L 677.034326 453.481148 
+L 241.9 453.481148 
+z
+" clip-path="url(#p3b34ea1ba2)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 241.9 488.711607 
+L 677.431467 488.711607 
+L 677.431467 475.228345 
+L 241.9 475.228345 
+z
+" clip-path="url(#p3b34ea1ba2)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 241.9 510.458803 
+L 680.476216 510.458803 
+L 680.476216 496.975541 
+L 241.9 496.975541 
+z
+" clip-path="url(#p3b34ea1ba2)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 241.9 532.206 
+L 686.433333 532.206 
+L 686.433333 518.722738 
+L 241.9 518.722738 
+z
+" clip-path="url(#p3b34ea1ba2)" style="fill: #2a78d6"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 241.9 553.54 
+L 241.9 84.192 
+" clip-path="url(#p3b34ea1ba2)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="mdef2d8031b" d="M 0 0 
+L 0 3.5 
+" style="stroke: #898781; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mdef2d8031b" x="241.9" y="553.54" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 10.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #898781" x="241.9" y="568.94" transform="rotate(-0 241.9 568.94)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 294.852154 553.54 
+L 294.852154 84.192 
+" clip-path="url(#p3b34ea1ba2)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#mdef2d8031b" x="294.852154" y="553.54" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 10.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #898781" x="294.852154" y="568.94" transform="rotate(-0 294.852154 568.94)">1</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 347.804308 553.54 
+L 347.804308 84.192 
+" clip-path="url(#p3b34ea1ba2)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#mdef2d8031b" x="347.804308" y="553.54" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 10.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #898781" x="347.804308" y="568.94" transform="rotate(-0 347.804308 568.94)">2</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 400.756462 553.54 
+L 400.756462 84.192 
+" clip-path="url(#p3b34ea1ba2)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#mdef2d8031b" x="400.756462" y="553.54" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 10.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #898781" x="400.756462" y="568.94" transform="rotate(-0 400.756462 568.94)">3</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 453.708616 553.54 
+L 453.708616 84.192 
+" clip-path="url(#p3b34ea1ba2)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#mdef2d8031b" x="453.708616" y="553.54" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 10.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #898781" x="453.708616" y="568.94" transform="rotate(-0 453.708616 568.94)">4</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 506.66077 553.54 
+L 506.66077 84.192 
+" clip-path="url(#p3b34ea1ba2)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#mdef2d8031b" x="506.66077" y="553.54" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 10.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #898781" x="506.66077" y="568.94" transform="rotate(-0 506.66077 568.94)">5</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_13">
+      <path d="M 559.612924 553.54 
+L 559.612924 84.192 
+" clip-path="url(#p3b34ea1ba2)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#mdef2d8031b" x="559.612924" y="553.54" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 10.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #898781" x="559.612924" y="568.94" transform="rotate(-0 559.612924 568.94)">6</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_15">
+      <path d="M 612.565078 553.54 
+L 612.565078 84.192 
+" clip-path="url(#p3b34ea1ba2)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#mdef2d8031b" x="612.565078" y="553.54" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 10.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #898781" x="612.565078" y="568.94" transform="rotate(-0 612.565078 568.94)">7</text>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_17">
+      <path d="M 665.517232 553.54 
+L 665.517232 84.192 
+" clip-path="url(#p3b34ea1ba2)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#mdef2d8031b" x="665.517232" y="553.54" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 10.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #898781" x="665.517232" y="568.94" transform="rotate(-0 665.517232 568.94)">8</text>
+     </g>
+    </g>
+    <g id="text_10">
+     <text style="font-size: 10.5px; font-family: 'NanumGothic'; text-anchor: middle; fill: #52514e" x="475.28" y="583.44" transform="rotate(-0 475.28 583.44)">출근시간 평균속도 (km/h)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_19">
+      <defs>
+       <path id="maad26a7a5a" d="M 0 0 
+L -3.5 0 
+" style="stroke: #898781; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#maad26a7a5a" x="241.9" y="112.267631" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: end; fill: #898781" x="234.9" y="115.867631" transform="rotate(-0 234.9 115.867631)">화곡로 화곡로부천시계→화곡로입구  (양천구)</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#maad26a7a5a" x="241.9" y="134.014828" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: end; fill: #898781" x="234.9" y="137.614828" transform="rotate(-0 234.9 137.614828)">청계천로 청계8가→청계7가  (종로구)</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_21">
+      <g>
+       <use xlink:href="#maad26a7a5a" x="241.9" y="155.762024" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: end; fill: #898781" x="234.9" y="159.362024" transform="rotate(-0 234.9 159.362024)">경인로 개봉사거리→구로소방서  (구로구)</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#maad26a7a5a" x="241.9" y="177.509221" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: end; fill: #898781" x="234.9" y="181.109221" transform="rotate(-0 234.9 181.109221)">뚝섬로 구의동 607→잠실대교북단교차로  (광진구)</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_23">
+      <g>
+       <use xlink:href="#maad26a7a5a" x="241.9" y="199.256418" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: end; fill: #898781" x="234.9" y="202.856418" transform="rotate(-0 234.9 202.856418)">송파대로 잠실대교남단교차로→잠실역  (송파구)</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#maad26a7a5a" x="241.9" y="221.003615" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: end; fill: #898781" x="234.9" y="224.603615" transform="rotate(-0 234.9 224.603615)">화랑로 구묵동교→화랑대역  (노원구)</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_25">
+      <g>
+       <use xlink:href="#maad26a7a5a" x="241.9" y="242.750811" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: end; fill: #898781" x="234.9" y="246.350811" transform="rotate(-0 234.9 246.350811)">오패산로 송중동주민센터→방천시장입구  (강북구)</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#maad26a7a5a" x="241.9" y="264.498008" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: end; fill: #898781" x="234.9" y="268.098008" transform="rotate(-0 234.9 268.098008)">충정로 충정로사거리→서대문역  (서대문구)</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_27">
+      <g>
+       <use xlink:href="#maad26a7a5a" x="241.9" y="286.245205" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_19">
+      <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: end; fill: #898781" x="234.9" y="289.845205" transform="rotate(-0 234.9 289.845205)">동일로 군자교동단→화양사거리  (성동구)</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_28">
+      <g>
+       <use xlink:href="#maad26a7a5a" x="241.9" y="307.992402" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_20">
+      <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: end; fill: #898781" x="234.9" y="311.592402" transform="rotate(-0 234.9 311.592402)">올림픽로35길 올림픽회관→잠실파크리오아파트  (송파구)</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_29">
+      <g>
+       <use xlink:href="#maad26a7a5a" x="241.9" y="329.739598" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_21">
+      <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: end; fill: #898781" x="234.9" y="333.339598" transform="rotate(-0 234.9 333.339598)">의사당대로 여의도공원앞→여의도역  (영등포구)</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_30">
+      <g>
+       <use xlink:href="#maad26a7a5a" x="241.9" y="351.486795" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_22">
+      <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: end; fill: #898781" x="234.9" y="355.086795" transform="rotate(-0 234.9 355.086795)">새문안로 정동사거리→서대문역  (종로구)</text>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_31">
+      <g>
+       <use xlink:href="#maad26a7a5a" x="241.9" y="373.233992" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_23">
+      <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: end; fill: #898781" x="234.9" y="376.833992" transform="rotate(-0 234.9 376.833992)">동작대로 이수역→사당역  (동작구)</text>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_32">
+      <g>
+       <use xlink:href="#maad26a7a5a" x="241.9" y="394.981189" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_24">
+      <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: end; fill: #898781" x="234.9" y="398.581189" transform="rotate(-0 234.9 398.581189)">도봉로 삼양입구사거리→미아사거리  (강북구)</text>
+     </g>
+    </g>
+    <g id="ytick_15">
+     <g id="line2d_33">
+      <g>
+       <use xlink:href="#maad26a7a5a" x="241.9" y="416.728385" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_25">
+      <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: end; fill: #898781" x="234.9" y="420.328385" transform="rotate(-0 234.9 420.328385)">영등포로 영등포청과시장→영등포시장  (영등포구)</text>
+     </g>
+    </g>
+    <g id="ytick_16">
+     <g id="line2d_34">
+      <g>
+       <use xlink:href="#maad26a7a5a" x="241.9" y="438.475582" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_26">
+      <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: end; fill: #898781" x="234.9" y="442.075582" transform="rotate(-0 234.9 442.075582)">화곡로 가양대교남단→가양아파트  (강서구)</text>
+     </g>
+    </g>
+    <g id="ytick_17">
+     <g id="line2d_35">
+      <g>
+       <use xlink:href="#maad26a7a5a" x="241.9" y="460.222779" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_27">
+      <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: end; fill: #898781" x="234.9" y="463.822779" transform="rotate(-0 234.9 463.822779)">안양천로 -→안천초교  (금천구)</text>
+     </g>
+    </g>
+    <g id="ytick_18">
+     <g id="line2d_36">
+      <g>
+       <use xlink:href="#maad26a7a5a" x="241.9" y="481.969976" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_28">
+      <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: end; fill: #898781" x="234.9" y="485.569976" transform="rotate(-0 234.9 485.569976)">사직로 사직공원→경복궁역  (종로구)</text>
+     </g>
+    </g>
+    <g id="ytick_19">
+     <g id="line2d_37">
+      <g>
+       <use xlink:href="#maad26a7a5a" x="241.9" y="503.717172" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_29">
+      <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: end; fill: #898781" x="234.9" y="507.317172" transform="rotate(-0 234.9 507.317172)">대림로 신대방역→대림사거리  (동작구)</text>
+     </g>
+    </g>
+    <g id="ytick_20">
+     <g id="line2d_38">
+      <g>
+       <use xlink:href="#maad26a7a5a" x="241.9" y="525.464369" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_30">
+      <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: end; fill: #898781" x="234.9" y="529.064369" transform="rotate(-0 234.9 529.064369)">송월길 교남동주민센터→정동사거리  (종로구)</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_23">
+    <path d="M 241.9 553.54 
+L 241.9 84.192 
+" style="fill: none; stroke: #c3c2b7; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 241.9 553.54 
+L 708.66 553.54 
+" style="fill: none; stroke: #c3c2b7; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="585.956621" y="114.967631" transform="rotate(-0 585.956621 114.967631)">6.3</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="599.988942" y="136.714828" transform="rotate(-0 599.988942 136.714828)">6.6</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="629.245007" y="158.462024" transform="rotate(-0 629.245007 158.462024)">7.1</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="640.232579" y="180.209221" transform="rotate(-0 640.232579 180.209221)">7.3</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="641.159242" y="201.956418" transform="rotate(-0 641.159242 201.956418)">7.3</text>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="648.704924" y="223.703615" transform="rotate(-0 648.704924 223.703615)">7.5</text>
+   </g>
+   <g id="text_37">
+    <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="648.837304" y="245.450811" transform="rotate(-0 648.837304 245.450811)">7.5</text>
+   </g>
+   <g id="text_38">
+    <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="665.120091" y="267.198008" transform="rotate(-0 665.120091 267.198008)">7.8</text>
+   </g>
+   <g id="text_39">
+    <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="665.517232" y="288.945205" transform="rotate(-0 665.517232 288.945205)">7.8</text>
+   </g>
+   <g id="text_40">
+    <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="669.091503" y="310.692402" transform="rotate(-0 669.091503 310.692402)">7.9</text>
+   </g>
+   <g id="text_41">
+    <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="675.04862" y="332.439598" transform="rotate(-0 675.04862 332.439598)">8.0</text>
+   </g>
+   <g id="text_42">
+    <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="678.35813" y="354.186795" transform="rotate(-0 678.35813 354.186795)">8.0</text>
+   </g>
+   <g id="text_43">
+    <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="679.946694" y="375.933992" transform="rotate(-0 679.946694 375.933992)">8.1</text>
+   </g>
+   <g id="text_44">
+    <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="680.343836" y="397.681189" transform="rotate(-0 680.343836 397.681189)">8.1</text>
+   </g>
+   <g id="text_45">
+    <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="683.785726" y="419.428385" transform="rotate(-0 683.785726 419.428385)">8.1</text>
+   </g>
+   <g id="text_46">
+    <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="687.492376" y="441.175582" transform="rotate(-0 687.492376 441.175582)">8.2</text>
+   </g>
+   <g id="text_47">
+    <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="687.624757" y="462.922779" transform="rotate(-0 687.624757 462.922779)">8.2</text>
+   </g>
+   <g id="text_48">
+    <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="688.021898" y="484.669976" transform="rotate(-0 688.021898 484.669976)">8.2</text>
+   </g>
+   <g id="text_49">
+    <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="691.066647" y="506.417172" transform="rotate(-0 691.066647 506.417172)">8.3</text>
+   </g>
+   <g id="text_50">
+    <text style="font-size: 9px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="697.023764" y="528.164369" transform="rotate(-0 697.023764 528.164369)">8.4</text>
+   </g>
+  </g>
+  <g id="text_51">
+   <text style="font-weight: 700; font-size: 15px; font-family: 'NanumGothic'; text-anchor: start; fill: #0b0b0b" x="7.2" y="19.2" transform="rotate(-0 7.2 19.2)">출근시간 통행속도 하위 20개 도로 구간</text>
+  </g>
+  <g id="text_52">
+   <text style="font-size: 10.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #52514e" x="7.2" y="45.84" transform="rotate(-0 7.2 45.84)">08~10시, 10-14(수)·10-15(목) 평균 · 길이 300m 이상 구간 · 단위 km/h</text>
+  </g>
+  <g id="text_53">
+   <text style="font-size: 8.5px; font-family: 'NanumGothic'; text-anchor: start; fill: #898781" x="7.2" y="604.252" transform="rotate(-0 7.2 604.252)">출처: 서울 교통빅데이터플랫폼 1시간 소통정보(구간별), TOPIS 서비스링크 형상(서울 열린데이터광장)</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p3b34ea1ba2">
+   <rect x="241.9" y="84.192" width="466.76" height="469.348"/>
+  </clipPath>
+ </defs>
+</svg>

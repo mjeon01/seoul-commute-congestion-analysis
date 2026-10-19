@@ -1,0 +1,16 @@
+﻿,dtype,missing,missing_pct,min,50%,max
+obs_time,datetime64[us],0,0.0,,,
+temp,float64,0,0.0,-14.0,16.6,37.8
+rain_mm,float64,0,0.0,0.0,0.0,43.2
+wind,float64,31,0.13,0.0,2.2,8.4
+humidity,int64,0,0.0,11.0,65.0,100.0
+snow_cm,float64,23570,96.09,,,
+rn_was_blank,bool,0,0.0,,,
+rain,bool,0,0.0,,,
+datetime,datetime64[us],0,0.0,,,
+date,datetime64[us],0,0.0,,,
+hour_start,int32,0,0.0,,,
+weekday,str,0,0.0,,,
+holiday_name,str,23112,94.23,,,
+day_type,str,0,0.0,,,
+peak,str,0,0.0,,,

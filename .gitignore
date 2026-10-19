@@ -1,0 +1,13 @@
+.env
+data/raw/*
+data/processed/*
+!data/*/.gitkeep
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+/*.csv
+.venv/
+data/mock/*
+!data/mock/.gitkeep
+*.jpeg
+*.jpg
