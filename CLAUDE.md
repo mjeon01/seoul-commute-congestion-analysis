@@ -3,7 +3,7 @@
 2026 교통문제 해결 데이터 분석 공모전용 프로젝트. **요구사항 원문은 `docs/project_spec.md`** — 작업 전 반드시 읽을 것.
 데이터 확보 현황·출처·호출 제약은 `docs/data_sources.md`.
 
-최종 갱신: 2026-10-19
+최종 갱신: 2026-10-19 (장기 교통량·AI 예측 반영)
 
 ## 반드시 지킬 원칙 (원문 9장 요약)
 - 실제 데이터만 사용. 확보 못 한 데이터로 결과를 만들지 않는다. 모의데이터는 `data/mock/`에서 코드 검증용으로만.
@@ -18,14 +18,14 @@
 - Python: 프로젝트 가상환경 `.venv/` (Python 3.14). 실행은 `.venv/bin/python`.
   - `requirements.txt` 설치 완료(pyarrow·pyyaml 포함). libomp 설치됨 → XGBoost·LightGBM 정상.
 - `.env` 키: `SEOUL_OPEN_API_KEY`(열린데이터광장), `DATA_GO_KR_SERVICE_KEY`(공공데이터포털), `TRAFFIC_DATA_PATH`(t-data 소통정보 CSV 경로). 형식은 `.env.example` 참고.
-- git: `git init`만 됨, 커밋 없음. `data/raw/*`, `data/processed/*`, 루트 `*.csv`, `.env`, `.venv/`는 gitignore.
+- git: 공개 저장소 https://github.com/mjeon01/seoul-commute-congestion-analysis (main). `data/raw/*`, `data/processed/*`, 루트 `*.csv`, `.env`, `.venv/`는 gitignore.
 
 ## 폴더 구조 (원문 8장 기준)
 ```
 src/collect/        수집 코드 (완료)
 src/preprocess/     전처리 (완료, 실행 순서·규칙은 docs/preprocessing_log.md)
 src/analysis/       EDA (eda_traffic / eda_transit / eda_factors[--long]) — 결과 요약 docs/eda_findings.md
-src/models/         forecast_volume.py: 첨두(08·09·18·19시) 지점 교통량 1시간 전 예측 — 코드 완성·모의데이터 검증, 실데이터 실행 대기
+src/models/         forecast_volume.py: 첨두(08·09·18·19시) 지점 교통량 1시간 전 예측 — 실데이터 실행 완료(E01·E02, model_forecast_metrics.csv)
 src/simulation/     simulate.py: 시나리오 A~E × 가정 낮음/중간/높음 × 속도모형(탄력성/BPR) — 완료, 가정값 config/simulation.yaml
 src/visualization/  style.py: 폰트·검증된 팔레트·save()(PNG300+SVG+표)·save_html()
 config/  notebooks/  reports/  outputs/{figures,tables,html,models}/
@@ -88,12 +88,17 @@ config/config.yaml  첨두 정의·혼잡 기준·좌표계
 - 소통정보는 **33시간(2026-10-14 01시~10-15 09시)** 뿐. t-data 다운로드가 최근 구간만 주는 것으로 보임 → 장기 속도자료 확보 방안을 사용자와 결정 중.
 - 승하차는 월 합계라 소통정보와 기간이 겹치지 않음 → 시간 단위 결합 금지, 패턴 비교만.
 
+## 진행 현황 (2026-10-19)
+- 장기 교통량 `data/raw/volume_peak/` 725/731일 확보. 20241108·20250407·20250417·20250605·20250616·20250630은 API가 "데이터 없음" 반환(원천 결측).
+- 07~19시 교통량 0(약 2%, D-46·D-27·B-22 집중)은 검지기 장애로 결측 처리 — eda_factors.py·forecast_volume.py 동일 규칙.
+- D02~D04, E01·E02 완료 → 보고서 4.4·5절·7.3, docs/eda_findings.md, 노트북 반영.
+- 예측 결과(시험 2025H2): MAE 베이스라인 322 → XGBoost 175(-45%), 고수요 F1 0.62 → 0.66(개선 작음).
+- 제출용 분석기획서: Claude 문서 https://claude.ai/code/artifact/02591f5a-3fd3-4366-a958-e78c81d2c0a0 (PDF 7쪽, 마지막 쪽 하단은 참고). 로컬 사본 `reports/분석기획서_초안.pdf`(git 제외).
+
 ## 다음 할 일
-1. 장기 교통량(`data/raw/volume_peak/`, 731일) 수집 완료 확인 — 실패 날짜는 로그 `data/raw/logs/volume_peak.log`의 "실패" 확인 후 같은 명령 재실행
-2. `eda_factors.py --long` (D02~D04) → 보고서 4.4 갱신
-3. `src/models/forecast_volume.py` 실데이터 실행 → 보고서 5절·7.3 작성 (베이스라인보다 못하면 그대로 보고)
-4. EDA 노트북 `notebooks/01_EDA.ipynb` (그림·표 불러와 해설)
-5. 보고서 최종 검토: 모든 수치를 outputs/tables 와 대조
+1. 팀명 받기 → 기획서 요약 표 `[팀명]` 교체, 파일명 `팀명_분석기획서.pdf`로 PDF 내보내기
+2. 보고서 최종 검토: 모든 수치를 outputs/tables 와 대조
+3. 제출: yaerumjung@koreashe.org, 마감 10/22(목) — 메일 발송은 사용자가 직접 또는 명시적 요청 시에만
 
 ## 보고서·결론 현황
 - 초안 `reports/final_report.md` (5절 AI 결과만 대기). 실행 가이드 `README.md`.

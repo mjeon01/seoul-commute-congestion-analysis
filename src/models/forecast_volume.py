@@ -64,6 +64,10 @@ def build_features(g):
     # 지점별 차로 구성 변화(행 수 변화)는 교통량 수준을 바꿈 → 지점의 최빈 행 수와 다른 관측은 제외
     mode_rows = g.groupby("spot_num").n_rows.agg(lambda s: s.mode().iat[0])
     g = g[g.n_rows == g.spot_num.map(mode_rows)]
+    # 07~19시 교통량 0은 실제 통행 없음이 아니라 검지기 장애(특정 지점에 연속 발생) → 결측으로 보고 타깃·시차 모두에서 제외
+    n_zero = int((g.vol == 0).sum())
+    print(f"교통량 0(검지기 장애로 판단) {n_zero:,}건({n_zero / len(g):.1%}) 제외")
+    g = g[g.vol > 0]
     s = g.set_index(["spot_num", "datetime"]).vol
 
     def shift(td):
@@ -74,7 +78,7 @@ def build_features(g):
     g["lag_1d"] = shift(pd.Timedelta(days=1))
     g["lag_7d"] = shift(pd.Timedelta(days=7))
     g["lag_1h_7d"] = shift(pd.Timedelta(days=7, hours=1))
-    g["ratio_1h_7d"] = g.lag_1h / g.lag_1h_7d  # 오늘 직전 시간이 지난주 같은 시간 대비 얼마나 많은지
+    g["ratio_1h_7d"] = g.lag_1h / g.lag_1h_7d.where(g.lag_1h_7d > 0)  # 분모 0은 결측. 오늘 직전 시간이 지난주 같은 시간 대비 얼마나 많은지
 
     g["hour"] = g.datetime.dt.hour
     g["date"] = g.datetime.dt.normalize()

@@ -11,3 +11,6 @@ data/mock/*
 !data/mock/.gitkeep
 *.jpeg
 *.jpg
+
+# 제출 전 초안 PDF(팀명 미정)
+reports/*초안*.pdf

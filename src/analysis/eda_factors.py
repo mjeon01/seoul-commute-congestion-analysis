@@ -93,10 +93,14 @@ def load_long():
     g["date"] = pd.to_datetime(g.ymd, format="%Y%m%d")
     g["hour_start"] = g.hh.astype(int)
     g["datetime"] = g.date + pd.to_timedelta(g.hour_start, unit="h")
-    # 지점별로 결측일이 다르면 합계가 왜곡되므로 전 기간 관측된 지점만 사용
+    # 07~19시 교통량 0은 검지기 장애로 보고 결측 처리(forecast_volume.py와 같은 규칙)
+    n_zero = int((g.vol == 0).sum())
+    print(f"교통량 0(검지기 장애로 판단) {n_zero:,}건({n_zero / len(g):.1%}) 제외")
+    g = g[g.vol > 0]
+    # 지점별로 결측 시간이 다르면 합계가 왜곡되므로 전 기간 날짜·시간의 95% 이상 관측된 지점만 사용
     n_days = g.date.nunique()
-    full = g.groupby("spot_num").date.nunique()
-    keep = full[full >= n_days * 0.95].index
+    full = g.groupby("spot_num").size()
+    keep = full[full >= n_days * g.hour_start.nunique() * 0.95].index
     print(f"장기 교통량: {g.date.min():%Y-%m-%d}~{g.date.max():%Y-%m-%d} {n_days}일, 지점 {g.spot_num.nunique()}개 중 "
           f"95% 이상 관측 {len(keep)}개 사용")
     g = g[g.spot_num.isin(keep)]
@@ -148,7 +152,8 @@ def fig_rain(g, n_spots):
     ax.set_xticks(range(len(hours)), [f"{h:02d}시" for h in hours])
     ax.grid(axis="x", visible=False)
     ax.set_ylabel("시간당 교통량 합계 (천 대, 평균)")
-    ax.legend(loc="lower right", ncol=3, fontsize=9)
+    ax.set_ylim(0, t["mean"].max() / 1e3 * 1.12)
+    ax.legend(loc="lower left", bbox_to_anchor=(0, 1.0), ncol=3, fontsize=9, frameon=False)
     titles(fig, "강수 여부별 평일 시간대 교통량",
            f"{g.date.min():%Y-%m-%d} ~ {g.date.max():%Y-%m-%d} 평일 · 교통량 지점 {n_spots}개 합계 · 강수는 같은 1시간 누적(서울 108) · 라벨: 무강수 대비 %")
     fig.tight_layout(rect=(0, 0.02, 1, 0.92))
@@ -164,14 +169,15 @@ def fig_monthly(g, n_spots):
     for i, p in enumerate(["출근", "퇴근"]):
         s = t[t.peak == p]
         ax.plot(s.month, s.vol / 1e3, color=SERIES[i], marker="o", markersize=4, markeredgecolor="white", label=f"{p} 2시간")
-        ax.text(s.month.iloc[-1] + pd.Timedelta(days=12), s.vol.iloc[-1] / 1e3, p, va="center", fontsize=10, color=INK2)
-    ax.set_ylim(0, t.vol.max() / 1e3 * 1.15)
+        ax.text(s.month.iloc[-1] + pd.Timedelta(days=12), s.vol.iloc[-1] / 1e3 + (6 if i == 0 else -6), p,
+                va="bottom" if i == 0 else "top", fontsize=10, color=INK2)
+    ax.set_ylim(800, t.vol.max() / 1e3 * 1.04)   # 변동을 보이도록 y축을 800천 대부터 표시(부제에 명시)
     ax.set_ylabel("평일 일평균 교통량 합계 (천 대)")
     ax.legend(loc="lower left", ncol=2)
     titles(fig, "월별 평일 출퇴근 시간 교통량",
-           f"{g.date.min():%Y-%m} ~ {g.date.max():%Y-%m} · 출근 08~10시, 퇴근 17~19시 · 교통량 지점 {n_spots}개 합계 · 공휴일 제외")
+           f"{g.date.min():%Y-%m} ~ {g.date.max():%Y-%m} · 출근 08~10시, 퇴근 17~19시 · 교통량 지점 {n_spots}개 합계 · 공휴일 제외 · y축 800부터")
     fig.tight_layout(rect=(0, 0.02, 1, 0.92))
-    save(fig, "D04_월별_출퇴근_교통량", SRC_VOL, t[["month", "peak", "vol"]].round(0))
+    save(fig, "D04_월별_출퇴근_교통량", SRC_VOL, t[["month", "peak"]].assign(vol=t.vol.round(0)))
 
 
 def main():

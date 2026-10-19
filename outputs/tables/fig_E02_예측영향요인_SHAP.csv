@@ -1,0 +1,16 @@
+﻿이름,변수,평균|SHAP|
+직전 1시간 교통량,lag_1h,1031.77
+전주 같은 시각,lag_7d,517.31
+지점·시각 평균(학습기간),spot_hour_mean,258.11
+직전 1시간 / 전주 직전 1시간,ratio_1h_7d,83.66
+전일 같은 시각,lag_1d,82.42
+시각,hour,66.65
+요일,weekday_num,27.53
+전주 직전 1시간,lag_1h_7d,20.67
+공휴일,is_holiday,12.76
+월,month,12.47
+직전 3시간 강수량,rain_prev_3h,9.27
+전날 휴일,prev_day_holiday,6.67
+주말,is_weekend,6.5
+다음날 휴일,next_day_holiday,4.25
+직전 1시간 강수량,rain_prev_h,3.21
