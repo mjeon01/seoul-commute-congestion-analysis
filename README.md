@@ -1,6 +1,7 @@
 # 서울시 출퇴근 교통혼잡 분석 및 AI 기반 교통정책 시뮬레이션
 
-2026 교통문제 해결 데이터 분석 공모전 프로젝트. 보고서: [`reports/final_report.md`](reports/final_report.md)
+2026 교통문제 해결 데이터 분석 공모전 프로젝트. 제출 보고서(PDF 5쪽)의 수치와 결과 파일 대조표: [`docs/report_revision_20261022.md`](docs/report_revision_20261022.md).
+[`reports/final_report.md`](reports/final_report.md)는 2026-10-19 긴 초안으로, 이후 추가된 분석(시범 시뮬레이션, AI 효과 검출 모의실험)은 반영되지 않았다.
 
 ## 1. 환경 준비
 
@@ -53,8 +54,29 @@ $PY src/models/forecast_volume.py
 # (코드 검증용 모의 데이터) $PY src/models/make_mock_volume.py && $PY src/models/forecast_volume.py --mock --src data/mock/volume_peak
 
 # 정책 시뮬레이션 (가정값: config/simulation.yaml)
-$PY src/simulation/simulate.py
+$PY src/simulation/simulate.py          # 시나리오 A~E → outputs/tables/sim_results.csv
+$PY src/simulation/simulate_pilot.py    # 1단계 시범 종로·중구 → sim_pilot_jongno_jung.csv (탄력성·BPR, 10km 통행시간, CO2 가정 예시)
+$PY src/simulation/export_links.py      # 구간별 속도 변화(B·E, 출근, 중간 가정) → sim_links_출근_중간.csv
+
+# 대중교통 보완 근거 (지하철 혼잡도: data.go.kr 15071311 파일을 data/raw/subway_congestion_20260630.csv 로 저장)
+$PY src/analysis/transit_relief.py      # subway_congestion_*.csv, bus_route_realloc*.csv, bus_cbd_stops_top100.csv, subway_cbd_alight_by_hour.csv
+
+# AI 반사실 효과 검출 모의실험 (실제 시행 정책의 효과 검증이 아님)
+$PY src/models/counterfactual_eval.py   # cf_model_perf, cf_placebo_mde, cf_injection, cf_detection_stats, cf_test_daily
+
+# 보고서 그림 (outputs/tables 만 읽음)
+$PY src/visualization/slide_charts.py outputs/figures/slides
 ```
+
+결과 구분: 실측 분석(EDA, transit_relief) · 가정 기반 시뮬레이션(simulate*, 값은 config/simulation.yaml) · 모의실험(counterfactual_eval).
+변경 이력과 보고서 수치 대조는 `docs/report_revision_20261022.md`.
+
+### 재현 한계
+- 원자료(`data/raw/`, `data/processed/`)와 `.env`는 저장소에 없다. 위 수집 명령과 본인 인증키로 다시 받아야 한다.
+- 1시간 소통정보(구간별)는 t-data에서 수동으로 받은 2026-10-14 01시~10-15 09시(33시간) 파일이다. t-data가 최근 기간만 내려받게 해 주어 같은 기간 파일을 나중에 다시 받지 못할 수 있다. 이 경우 소통정보 기반 결과(정체 비율, 시뮬레이션 기준선·`sim_*`)는 재현되지 않는다.
+- 지하철 혼잡도(2026-06 기준본)는 공공데이터포털 파일이 갱신되면 값이 달라질 수 있다.
+- 열린데이터광장 교통량 이력 중 6일(20241108·20250407·20250417·20250605·20250616·20250630)은 API가 데이터 없음을 반환한다(원천 결측).
+- 원자료가 같으면 `simulate*`·`counterfactual_eval`·`transit_relief` 결과는 결정적으로 같다(고정 random_state, 무작위 반복 없음). 2026-10-22 재실행으로 `outputs/tables`의 해당 CSV가 바이트 단위로 같음을 확인했다.
 
 ## 3. 폴더 구조
 
@@ -65,8 +87,8 @@ $PY src/simulation/simulate.py
 | `src/collect/` | API 수집 |
 | `src/preprocess/` | 전처리 — 규칙은 `docs/preprocessing_log.md` |
 | `src/analysis/` | EDA — 요약은 `docs/eda_findings.md` |
-| `src/models/` | 첨두 교통량 1시간 전 예측 |
-| `src/simulation/` | 시나리오 A~E 시뮬레이션 |
+| `src/models/` | 첨두 교통량 1시간 전 예측, AI 반사실 효과 검출 모의실험 |
+| `src/simulation/` | 시나리오 A~E, 1단계 시범(종로·중구) 시뮬레이션 |
 | `src/visualization/style.py` | 그림 공통 스타일·저장 규칙 |
 | `outputs/figures/` | 그림(PNG 300dpi, SVG) |
 | `outputs/html/` | 인터랙티브 그림(Plotly, Folium) |

@@ -3,6 +3,7 @@
 1) 지하철: 평일 30분 단위·역·방향별 혼잡도(%, 100% = 열차 정원 탑승)로 첨두 정원 초과 구간 집계
 2) 버스: 노선별 출근 첨두(07·08시) 승차와 업무지구 하차 비중으로 '증회 노선'과 '배차 조정 노선' 구분
 3) 정류소: 업무지구 출근 첨두 하차 상위 정류소(승하차 안내 인력 배치 후보)
+4) 시차출근 근거: 도심(종로·중구) 지하철 시간대별 하차(2025년 월평균 일 하차)
 결과는 가정 없는 실측 집계. 배차 간격·차량 대수는 공개 자료로 확보하지 못해 노선 수·승차 인원 기준으로만 비교한다.
 """
 from pathlib import Path
@@ -55,6 +56,14 @@ def bus():
     return r.sort_values("승차", ascending=False), grp, stops
 
 
+def cbd_alight():
+    d = pd.read_parquet(PROC / "subway_monthly_hourly.parquet", columns=["ym", "hour_start", "daily_alight", "SIGUNGU_NM"])
+    d = d[d.ym.astype(str).str.startswith("2025") & d.SIGUNGU_NM.isin(["종로구", "중구"])]
+    h = (d.groupby("hour_start").daily_alight.sum() / d.ym.nunique()).rename("일평균_하차").to_frame()
+    h["09시대_대비_배수"] = h["일평균_하차"] / h.loc[9, "일평균_하차"]
+    return h.loc[6:10].round(3)
+
+
 def main():
     prof, top, by_gu = subway()
     routes, grp, stops = bus()
@@ -64,6 +73,8 @@ def main():
     routes.to_csv(TABLES / "bus_route_realloc.csv", encoding="utf-8-sig")
     grp.to_csv(TABLES / "bus_route_realloc_summary.csv", encoding="utf-8-sig")
     stops.head(100).to_csv(TABLES / "bus_cbd_stops_top100.csv", index=False, encoding="utf-8-sig")
+    cbd = cbd_alight()
+    cbd.to_csv(TABLES / "subway_cbd_alight_by_hour.csv", encoding="utf-8-sig")
     am = prof[prof["시각"].isin(AM_SLOTS)]
     print(am.to_string(index=False))
     print(top.to_string(index=False))
@@ -71,6 +82,7 @@ def main():
     print(grp.to_string())
     print(routes[routes["구분"].str.startswith("증회")].head(8).to_string())
     print(stops.head(10).to_string(index=False), "\n상위 100 정류소 하차 합", round(stops.head(100)["출근첨두_시간당_하차"].sum()))
+    print(cbd.to_string())
 
 
 if __name__ == "__main__":

@@ -254,6 +254,9 @@ def link_map(hour):
     return draw
 
 
+PM_NUDGE = {"도봉구": (-500, 1200), "강북구": (-1500, -300), "노원구": (900, -600)}  # 북쪽 세 구 이름 겹침 방지
+
+
 def policy_map(fs):
     tg = csv("sim_targets.csv").set_index("항목")["값"]
     am_t = [g.strip() for g in tg["선택관리 대상 자치구(출근)"].split(",")]
@@ -282,15 +285,15 @@ def policy_map(fs):
         if g not in stage1 + stage2 + bus:
             continue
         pt = rw.geometry.representative_point()
-        dx, dy = NUDGE.get(g, (0, 0))
-        ax.text(pt.x + dx, pt.y + dy, g[:-1], ha="center", va="center", fontsize=12, fontweight="bold",
+        dx, dy = {**NUDGE, **PM_NUDGE}.get(g, (0, 0))
+        ax.text(pt.x + dx, pt.y + dy, g[:-1], ha="center", va="center", fontsize=9.5, fontweight="bold",
                 color="white" if g in stage1 else NAVY,
                 bbox=None if g in stage1 else dict(boxstyle="round,pad=0.15", fc="white", ec="none", alpha=0.75))
     ax.set_axis_off()
-    hd = [Patch(color=NAVY, label="1단계 첨두 수요관리"), Patch(color="#FFD43B", label="1단계 출근 버스 증편"),
-          Patch(color="#BFD3F5", label="2단계 관리 확대 후보"), Patch(color="#FFF0A8", label="2단계 버스 증편"),
-          Patch(facecolor="#FFF0A8", edgecolor=BLUE, hatch="///", lw=0, label="2단계 관리·버스 모두")]
-    fig.legend(handles=hd, loc="outside lower center", fontsize=12, ncol=2, handlelength=1.2)
+    hd = [Patch(color=NAVY, label="1단계 첨두 수요관리"), Patch(color="#FFD43B", label="1단계 버스 재배분 검토"),
+          Patch(color="#BFD3F5", label="2단계 관리 확대 후보"), Patch(color="#FFF0A8", label="2단계 버스 재배분 검토"),
+          Patch(facecolor="#FFF0A8", edgecolor=BLUE, hatch="///", lw=0, label="2단계 관리·버스 검토")]
+    fig.legend(handles=hd, loc="outside right center", fontsize=10.5, ncol=1, handlelength=1.2)
     return fig
 
 
@@ -332,7 +335,7 @@ def sim_map(scen):
         cb = fig.colorbar(mpl.cm.ScalarMappable(cmap=cmap, norm=norm), ax=ax, orientation="horizontal",
                           fraction=0.045, pad=0.01, aspect=35, ticks=[-5, 0, 10, 20, 30])
         cb.ax.set_xticklabels(["-5%", "0", "+10%", "+20%", "+30%↑"], fontsize=11)
-        cb.set_label("출근 첨두 구간 속도 변화 · 빨강 = 느려짐", fontsize=11.5, color=MUTED)
+        cb.set_label("출근 08~10시 구간 속도 변화 · BPR 모형 · 중간 가정(가정 기반) · 빨강 = 느려짐", fontsize=10.5, color=MUTED)
         cb.outline.set_visible(False)
         return fig
     return draw
@@ -378,12 +381,12 @@ def cf_detect(fs):
     for xi, yi in zip(x, t["AI 검출률(%)"]):
         ax.text(xi, yi + 5, f"{yi:.0f}%", ha="center", fontsize=12, color=NAVY, fontweight="bold")
     ax.axvspan(7, 16, color="#EEF4FF", zorder=0, lw=0)
-    ax.text(11.2, 8, "서울형 예상 효과\n(구역 교통량 -7~16%)", ha="center", fontsize=11.5, color=BLUE, fontweight="bold")
-    ax.set_xticks(x, [f"-{v:.0f}%" for v in x])
-    ax.set_xlabel("실제 정책 효과(관리 구역 첨두 교통량 감소)", fontsize=12)
+    ax.text(11.2, 8, "시뮬레이션 가정 범위\n(관리 구역 교통량 -7~16%)", ha="center", fontsize=11.5, color=BLUE, fontweight="bold")
+    ax.set_xticks([v for v in x if v != 3], [f"-{v:.0f}%" for v in x if v != 3])  # -2·-3% 눈금 겹침 방지(점은 모두 표시)
+    ax.set_xlabel("넣은 가상 효과(관리 구역 첨두 교통량 감소, 모의실험)", fontsize=12)
     ax.set_ylim(0, 112)
     ax.set_yticks([0, 25, 50, 75, 100], ["0", "25%", "50%", "75%", "100%"])
-    ax.set_ylabel("4주 안에 효과를 잡아낼 확률", fontsize=12)
+    ax.set_ylabel("검출률(4주 창 106개)", fontsize=12)
     ax.legend(loc="upper left", fontsize=11.5)
     return fig
 
@@ -400,11 +403,11 @@ def cf_demo(fs):
     ax.axvspan(post.index[0], post.index[-1], color="#EEF4FF", lw=0, zorder=0)
     ax.fill_between(post.index, act.iloc[20:], cf.iloc[20:], color="#9DBEFD", alpha=0.45, lw=0, zorder=1)
     ax.plot(d.index, cf, color=BLUE, lw=2.4, ls=(0, (4, 2)), label="AI 반사실: 정책이 없었다면", zorder=3)
-    ax.plot(d.index, act, color=NAVY, lw=2.4, marker="o", ms=4, label="실제(가상 시범)", zorder=4)
+    ax.plot(d.index, act, color=NAVY, lw=2.4, marker="o", ms=4, label="실측 × 0.9 (가상 효과 적용)", zorder=4)
     ax.text(pre.index[10], ax.get_ylim()[1], "시행 전 4주", ha="center", va="top", fontsize=12, color=MUTED)
     ax.text(post.index[20], ax.get_ylim()[1], "시범 운영", ha="center", va="top", fontsize=12, color=BLUE, fontweight="bold")
     mid = post.index[30]
-    ax.annotate(f"차이 = AI 판정 효과 {est:.1f}%\n(실제 넣은 효과 -10%)", xy=(mid, (act[mid] + cf[mid]) / 2), xytext=(post.index[22], act.min() + 0.1),
+    ax.annotate(f"차이 = AI 추정 효과 {est:.1f}%\n(넣은 가상 효과 -10%)", xy=(mid, (act[mid] + cf[mid]) / 2), xytext=(post.index[22], act.min() + 0.1),
                 fontsize=12.5, color=NAVY, fontweight="bold", arrowprops=dict(arrowstyle="-", color=NAVY, lw=1))
     ax.set_ylabel("관리 구역 첨두 교통량(만 대/일)", fontsize=12)
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%m/%d"))

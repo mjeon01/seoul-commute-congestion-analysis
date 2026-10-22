@@ -3,8 +3,14 @@
 정책이 없었다면 관리 구역(종로·중구)의 첨두 교통량이 얼마였을지를, 정책 영향을 받지 않는 정보
 (멀리 떨어진 자치구의 같은 시각 교통량, 달력, 강수)만으로 예측한다. 시행 후 '실제 - 예측'이 정책 효과다.
 
-검증: 정책이 없던 2025년 하반기(시험기간)에 가짜 효과(−X%)를 넣어, 4주 시범 창에서 몇 %부터 잡아내는지
-(최소 검출 효과, MDE) 계산하고 단순 전후 비교·이중차분과 비교한다.
+검증(모의실험 — 실제 시행된 정책의 효과 검증이 아님):
+  학습 2024-01~12, 검증 2025-01~06(모델 선택), 시험 2025-07~12. 평일·비공휴일, 08·09·17·18시.
+  입력: 비교 자치구(종로·중구와 인접 7개 구 제외)별 같은 시각 교통량, 비교 구 합계, 관리 구역 같은 날 12시 교통량,
+        요일·공휴일·월, 직전 1시간 강수. 베이스라인: 선형(Ridge), 이중차분(비교 구 합계 대비), 단순 전후 비교.
+  시험기간의 영업일 20일(약 4주) 창을 1일씩 옮겨 106개 창을 만들고, 창마다 직전 20일과 비교해 효과를 추정한다.
+  가짜 효과 −X%는 창 안 관리 구역 실측 교통량에 (1−X%)를 곱한 것과 같다(세 방법 모두 같은 창·같은 직전 4주 사용).
+  검출 = 추정값이 '효과 없는 창 추정값 SD × 1.96'보다 더 음(−)일 때(방법별 자기 기준, 단측). 무작위 반복 없음(결정적).
+  한계: 창이 겹쳐 독립 표본이 아니다. 12시 관리 구역 교통량이 정책 영향을 받으면 효과가 과소 추정될 수 있다.
 """
 import sys
 from pathlib import Path
@@ -70,6 +76,12 @@ def split(X, name):
     return X[(X.date >= a) & (X.date <= b)]
 
 
+def wilson(p, n, z=1.96):
+    c = (p + z * z / (2 * n)) / (1 + z * z / n)
+    h = z * np.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / (1 + z * z / n)
+    return max(0, c - h), min(1, c + h)
+
+
 def main():
     agg, n_sp = daily_panel()
     print("지점 수:", n_sp.to_dict())
@@ -129,6 +141,26 @@ def main():
         inj.append(res)
     inj = pd.DataFrame(inj)
     print(inj.to_string(index=False))
+    # 판정 기준·오탐률·신뢰구간 — 창은 1영업일씩 겹쳐 이동하므로 서로 독립이 아니다.
+    # 겹치지 않는 창 수(n_eff = 시험 영업일 ÷ 20)로 계산한 Wilson 95% 구간을 함께 낸다(보수적).
+    n_eff = len(dates) // WINDOW
+    stats = []
+    for k in est:
+        v = np.array(est[k])
+        thr_k = 1.96 * v.std(ddof=1)
+        for x in [0, 10]:
+            e = (1 - x / 100) * (1 + v / 100) * 100 - 100
+            rate = (e < -thr_k).mean()
+            row = {"방법": k, "넣은 효과(%)": -x, "판정 기준": f"추정값 < -{thr_k:.2f}%p (효과 없는 창 추정값 SD×1.96, 단측)",
+                   "창 수(중첩)": len(v), "겹치지 않는 창 수": n_eff,
+                   ("오탐률(%)" if x == 0 else "검출률(%)"): round(rate * 100, 1)}
+            for lab, n in (("창 수 기준", len(v)), ("독립 창 수 기준", n_eff)):
+                lo, hi = wilson(rate, n)
+                row[f"95% 신뢰구간({lab})"] = f"{lo * 100:.0f}~{hi * 100:.0f}%"
+            stats.append(row)
+    stats = pd.DataFrame(stats)
+    print(stats.to_string(index=False))
+    stats.to_csv(TABLES / "cf_detection_stats.csv", index=False, encoding="utf-8-sig")
     perf.to_csv(TABLES / "cf_model_perf.csv", index=False, encoding="utf-8-sig")
     mde.to_csv(TABLES / "cf_placebo_mde.csv", index=False, encoding="utf-8-sig")
     inj.to_csv(TABLES / "cf_injection.csv", index=False, encoding="utf-8-sig")
